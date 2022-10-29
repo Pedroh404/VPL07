@@ -63,3 +63,50 @@ for(int i = 0; i< j; i++ ){
         numeros.push_back(palavra[i][9]);
        }
 }
+int element_having_max_freq = 0;
+int k = 0;
+k = numeros.size();
+for(int z=0;z<=k;z++)
+	{
+	     int maxcount = 0;
+
+    for (int i = 0; i < k; i++) {
+        int count = 0;
+        for (int j = 0; j < k; j++) {
+            if (numeros[i] == numeros[j])
+                count++;
+        }
+
+        if (count > maxcount) {
+            maxcount = count;
+            element_having_max_freq = numeros[i];
+        }
+
+    }
+
+
+	}
+numeros1.push_back( element_having_max_freq - 48);
+
+
+numeros.clear();
+
+
+
+}
+for(int i = 0; i < 6; i++){
+    int x;
+    x = numeros1[i];
+    buffer << x;
+
+
+}
+s1 = buffer.str();
+s1.insert(1, " ");
+s1.insert(3, " ");
+s1.insert(5, " ");
+s1.insert(7, " ");
+s1.insert(9, " ");
+return s1;
+
+}
